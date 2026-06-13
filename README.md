@@ -1,0 +1,1 @@
+# SentinelAI-Local-AI-Security-Gateway-for-LLM-IDE-Agent-Workflows
