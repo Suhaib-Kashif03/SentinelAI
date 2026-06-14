@@ -2,6 +2,7 @@ import re
 from typing import Dict, List, Tuple
 
 from backend.models import RuleMatch, ScanResponse
+from backend.secret_detector import find_secret_rule_matches
 
 
 RULES = [
@@ -259,6 +260,8 @@ def scan_text(content: str, input_type: str) -> ScanResponse:
     normalized_content = normalize_text(content)
 
     matches = find_rule_matches(normalized_content)
+    matches.extend(find_secret_rule_matches(normalized_content))
+
     risk_score = calculate_risk_score(matches)
     decision = decide(risk_score, matches)
 

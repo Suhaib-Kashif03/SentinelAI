@@ -2,6 +2,7 @@ import re
 from typing import List, Optional
 
 from backend.models import CommandScanResponse, RuleMatch
+from backend.secret_detector import find_secret_rule_matches
 
 
 COMMAND_RULES = [
@@ -360,6 +361,8 @@ def analyze_command(command: str) -> CommandScanResponse:
     command_chain_detected = has_command_chaining(normalized_command)
 
     matches = find_command_matches(normalized_command)
+    matches.extend(find_secret_rule_matches(normalized_command))
+
     risk_score = calculate_command_risk_score(matches, command_chain_detected)
     decision = decide_command(risk_score, matches)
 
