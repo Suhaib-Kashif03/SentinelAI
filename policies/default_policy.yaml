@@ -28,6 +28,7 @@ category_actions:
 
 rules:
   block_prompt_injection: true
+  block_jailbreak_attempts: false
   block_secret_leakage: true
   block_destructive_commands: true
   block_remote_script_execution: true
@@ -35,7 +36,9 @@ rules:
   block_security_control_disable: true
   require_approval_for_privileged_commands: true
   require_approval_for_package_installation: true
+  require_approval_for_unsafe_code: true
   warn_on_reconnaissance: true
+  warn_on_unknown_risk: true
   log_all_events: true
 
 redaction:
@@ -46,12 +49,24 @@ redaction:
 
 command_controls:
   block_rm_rf_root: true
+  block_recursive_delete: true
+  block_disk_formatting: true
+  block_disk_overwrite: true
+  block_fork_bomb: true
   block_private_key_access: true
   block_env_dump: true
   block_curl_pipe_shell: true
+  block_wget_pipe_shell: true
+  block_powershell_iex_download: true
   block_security_tool_disable: true
+  block_network_exfiltration: true
   require_approval_for_sudo: true
+  require_approval_for_chmod: true
+  require_approval_for_recursive_chmod: true
+  require_approval_for_user_modification: true
   require_approval_for_package_managers: true
+  warn_on_system_reconnaissance: true
+  warn_on_network_reconnaissance: true
 
 llm_controls:
   scan_user_prompt_before_llm: true
@@ -59,6 +74,19 @@ llm_controls:
   block_prompt_injection_before_llm: true
   block_secret_leakage_to_llm: true
   block_unsafe_generated_commands: true
+  require_approval_for_risky_generated_commands: true
+  strip_thinking_blocks: true
+  max_llm_response_tokens: 120
+
+agent_controls:
+  enabled: true
+  execute_commands: false
+  extract_fenced_commands: true
+  extract_inline_commands: true
+  review_all_suggested_commands: true
+  block_agent_if_any_command_blocked: true
+  require_approval_if_any_command_requires_approval: true
+  warn_if_any_command_warns: true
 
 audit:
   enabled: true
@@ -66,3 +94,16 @@ audit:
   log_warned_events: true
   log_blocked_events: true
   log_approval_required_events: true
+  store_raw_content: false
+  store_redacted_content: true
+  store_content_hash: true
+  max_content_preview_length: 500
+
+dashboard:
+  enabled: true
+  default_event_limit: 50
+  max_event_limit: 200
+  show_policy_page: true
+  show_live_scanner: true
+  show_secure_llm_chat: true
+  show_agent_simulator: true

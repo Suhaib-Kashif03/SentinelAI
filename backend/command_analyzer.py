@@ -205,6 +205,16 @@ COMMAND_RULES = [
         "score": 85,
         "pattern": r"\bdocker\s+run\b.*(--privileged|-v\s+/:/host|-v\s+/var/run/docker\.sock)",
         "reason": "Detected risky Docker command that may expose the host system."
+    },
+
+
+    {
+    "rule_id": "CMD-PRIV-005",
+    "category": "PRIVILEGE_ESCALATION",
+    "severity": "HIGH",
+    "score": 75,
+    "pattern": r"\bchmod\s+-R\b.*\s(/|~|/etc|/bin|/usr|/var|/home)",
+    "reason": "Detected recursive chmod on a broad or sensitive directory."
     }
 ]
 
