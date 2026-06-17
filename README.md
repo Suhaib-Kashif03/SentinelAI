@@ -576,35 +576,101 @@ Dashboard features include:
 
 ## Screenshots
 
+The following screenshots demonstrate SentinelAI's dashboard, API documentation, live scanner, secure chat workflow, agent simulation, audit logging, policy page, and evaluation results.
+
 ### Dashboard Overview
 
-```md
 ![Dashboard Overview](screenshots/dashboard-overview.png)
-```
 
-### Prompt Injection Detection
+---
 
-```md
-![Prompt Injection Detection](screenshots/prompt-injection-detection.png)
-```
+### Swagger API Documentation
 
-### Secret Redaction
+![Swagger API Docs](screenshots/swagger-api-docs.png)
 
-```md
-![Secret Redaction](screenshots/secret-redaction.png)
-```
+---
 
-### Dangerous Command Blocking
+### Policy Page
 
-```md
-![Dangerous Command Blocking](screenshots/dangerous-command-blocking.png)
-```
+![Policy Page](screenshots/policy-page.png)
 
-### Evaluation Report
+---
 
-```md
-![Evaluation Report](screenshots/evaluation-report.png)
-```
+### Audit Events
+
+![Audit Events](screenshots/audit-events.png)
+
+---
+
+## Live Scanner Results
+
+### Prompt Injection Blocked
+
+![Live Scanner Prompt Injection Blocked](screenshots/live-scanner-prompt-injection-blocked.png)
+
+### Secret Leakage Blocked
+
+![Live Scanner Secret Leakage Blocked](screenshots/live-scanner-secret-leakage-blocked.png)
+
+### Dangerous Command Blocked
+
+![Live Scanner Command Blocked](screenshots/live-scanner-command-blocked.png)
+
+---
+
+## Secure Chat Results
+
+### Safe Prompt Allowed
+
+![Secure Chat Prompt Allowed](screenshots/secure-chat-prompt-allow.png)
+
+### Prompt Injection Blocked
+
+![Secure Chat Prompt Injection Blocked](screenshots/secure-chat-prompt-injection-blocked.png)
+
+### Risky Command Flagged
+
+![Secure Chat Risky Command Flagged](screenshots/secure-chat-risky-command-flagged.png)
+
+### Secret Leakage Blocked
+
+![Secure Chat Secret Leakage Blocked](screenshots/secure-chat-secret-leakage-blocked.png)
+
+---
+
+## Agent Simulator Results
+
+### Safe Command
+
+![Agent Simulator Safe Command](screenshots/agent-simulator-safe-command.png)
+
+### Risky Command Blocked
+
+![Agent Simulator Risky Command Blocked](screenshots/agent-simulator-risky-command-blocked.png)
+
+### Reviewed Commands
+
+![Agent Simulator Reviewed Commands](screenshots/agent-simulator-reviewed-commands.png)
+
+### Package Installation Approval
+
+![Agent Simulator Package Install Approval](screenshots/agent-simulator-package-install-approval.png)
+
+---
+
+## Evaluation Results
+
+### Evaluation Overview
+
+![Evaluation Overview](screenshots/evaluation-overview.png)
+
+### Category Coverage
+
+![Evaluation Category Coverage](screenshots/evaluation-category-coverage.png)
+
+### Full Evaluation Results
+
+![Evaluation Full Results](screenshots/evaluation-full-results.png)
 
 ---
 
