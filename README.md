@@ -851,8 +851,8 @@ This project is licensed under the MIT License.
 **Suhaib Kashif**
 Cybersecurity, Cloud Security, and AI Security Enthusiast
 
-GitHub: `https://github.com/YOUR_USERNAME`
-LinkedIn: `https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME`
+GitHub: `https://github.com/Suhaib-Kashif03`
+LinkedIn: `https://www.linkedin.com/in/suhaib-kashif-2442a22a9/`
 
 ---
 
